@@ -31,7 +31,6 @@ try {
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = 'Email desde la web';
     $mail->Body    = $body;
-    $mail->CharSet    = 'UTF-8';
     $mail->send();
     echo 'El mensaje se envió correctamente';
 } catch (Exception $e) {
