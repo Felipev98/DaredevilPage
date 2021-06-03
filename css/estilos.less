@@ -1,0 +1,1157 @@
+// Variables
+
+
+
+//Colores
+@botones: #FF6E0D;
+@titulos: #6A0208;
+@negro: #000000;
+@azul-oscuro:#000747;
+@gris-oscuro:#CFCFCF;
+@gris-claro:#D6D3D3;
+@gris-lineas:#707070;
+@blanco: #FFFFFF;
+@gris-titulo: #808080;
+//Fuentes
+@fuente-principal: 'Raleway', sans-serif;
+@fuente-secundaria:'Lato', sans-serif;
+
+/*-------------------------------------------------------*/
+
+// Generales
+
+/*-------------------------------------------------------*/
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+}
+
+body{
+	font-size: 16px;
+	font-family: @fuente-principal;
+	color: @negro; 
+}
+
+.contenedor{
+	width: 90%;
+	max-width: 1080px;
+	margin: 0 auto;
+}
+
+
+
+.titulo-seccion{
+	text-align: center;
+	margin-bottom: 40px;
+
+	}
+.titulo-seccion h2{
+	font-family: @fuente-principal;
+	color: @titulos;
+	font-size: 3.75rem;
+	margin-bottom: 15px;
+	font-weight: 700;
+
+}
+
+.titulo-seccion p{
+
+font-family: @fuente-secundaria;
+color: @gris-titulo;
+font-size: 1.25rem;
+}
+
+
+// Botón volver arriba
+.btn-volver-arriba{
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	background:fade(@gris-lineas, 70%);
+	border-radius:30%;
+	position:fixed;
+	bottom:20px;
+	right: 20px;
+	z-index: 999999;
+	margin-right: -60px;
+	transition: all .4s ease;
+}
+
+.btn-volver-arriba a{
+display: inline-block;
+width: 100%;
+height: 100%;
+border-radius:30%;
+text-align: center;
+
+transition: all .3s ease;
+}	
+
+.btn-volver-arriba a i{
+
+font-size: 1rem;
+color: @blanco;
+line-height: 40px;
+transition: all .3s ease;
+
+}
+
+.btn-volver-arriba a i:hover{
+color: fade(@azul-oscuro, 60%);
+}	
+
+// Encabezado pc
+
+.menu-bar-pc{
+	width: 100%;
+	min-height: 68px;
+	padding: 0 36px;
+	border-bottom:1px;
+	display: flex;
+	background: transparent;
+	flex-direction: row;
+	justify-content:space-between;
+	align-items: center;
+	position: relative;
+	z-index: 100;
+	
+	
+}
+
+.logo{
+
+display: inline-block;
+width: 50px;
+}
+
+.logo img{
+	width: 100%;
+	vertical-align: top;
+}
+
+ .menu-principal a{
+
+	display: inline-block;
+	padding: 0 10px;
+	color: @blanco;
+	text-decoration: none;
+	font-family: @fuente-secundaria;
+	font-size: 1.25rem;
+	font-weight: 300;
+	line-height: 1.5rem;
+	transition: all .3s ease;
+
+}
+.menu-bar-pc .menu-principal a:hover{
+	color: @azul-oscuro;
+	transform: rotate(20deg);
+
+}
+.menu-principal a:last-child{
+padding-right: 0;
+}
+.menu-contacto a{
+display: inline-block;
+padding: 8px 20px;
+color: @blanco;
+text-decoration: none;
+font-family: @fuente-secundaria;
+font-size: 1.25rem;
+font-weight: 300;
+line-height: 1.5rem;
+background:@botones;
+border-radius: 82px;
+box-shadow: 0px 2px 2px -1px black;
+transition: all .4s ease;
+}
+.menu-contacto a:hover{
+	color: @azul-oscuro;
+	transform: scale(1.1);
+}	
+
+// Menu-mobile
+.menu-mobile{
+	display: none;
+}
+
+
+// Encabezado fijo
+.encabezado-fijo{
+	width: 100%;
+	min-height: 68px;
+	padding: 0 36px;
+	font-weight: 400;
+	border-bottom: 1px solid rgba(204,204,204,0.5);
+	background: @blanco;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items:center;
+	position:fixed;
+	top: 0;
+	z-index: 100;
+	transition: all .5s ease;
+	margin-top: -120px;
+
+}
+
+.encabezado-fijo .menu-principal a{
+	font-family: @fuente-secundaria;
+	font-weight:400;
+	color: @azul-oscuro;
+}
+
+.encabezado-fijo .menu-principal a:hover{
+
+	color: fade(@botones, 60%);
+}
+
+.encabezado-fijo .menu-contacto a:hover{
+	color: @azul-oscuro;
+}
+
+// Banner principal
+
+.main{
+	width: 100%;
+	margin-top: -68px;
+
+}
+
+.main .banner-principal{
+	width: 100%;
+	position:relative;
+}
+
+.main .banner-principal .banner{
+width: 100%;
+height: 100vh;
+background-image: url(../img/daredevil.jpg);
+background position:center;
+background-size:cover;
+background-repeat: no-repeat;
+background-attachment: fixed;
+display: flex;
+align-items:center;
+
+}
+
+.main .banner-principal .banner .texto-banner{
+width: 90%;
+padding-left: 20px;
+
+
+
+
+}
+
+.main .banner-principal .banner .texto-banner h2{
+font-family: @fuente-principal;
+font-size:  4.375rem;
+font-weight:900;
+color: @blanco;
+
+
+}
+.main .banner-principal .banner .texto-banner p{
+font-family: @fuente-secundaria;
+font-size: 1.25rem;
+font-weight: 400;
+color: @blanco;
+}
+
+.main .banner-principal .banner .texto-banner a{
+font-family: @fuente-secundaria;
+font-size: 1.25rem;
+font-weight: 400;
+color: @blanco;
+text-decoration: none;
+padding: 8px 20px;
+background: @botones;
+border-radius: 82px;
+position:absolute;
+margin-top: 2px;
+text-align: center;
+transform: translateX(95%);
+transition: all .3s ease;
+z-index: 9;
+cursor: pointer;
+
+}	
+.main .banner-principal .banner .texto-banner a:hover{
+	color: @azul-oscuro;
+	
+
+}
+
+
+.main .banner-principal .banner .imagen-banner img{
+	margin-right: 20px;
+	
+	
+	
+
+}
+
+.ondas{
+	width: 100%;
+	max-height: 33%;
+	position:absolute;
+	top: 55;
+	bottom:0;
+	
+	
+
+}
+
+// Sección casos resueltos
+
+.main .casosResueltos{
+
+	padding: 60px 0 54px 0;
+	position:relative;
+	
+
+}
+
+.main .casosResueltos .fotos-casosResueltos{
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding-bottom:34px;
+	border-bottom: 2px solid @titulos;
+	
+	
+
+}
+
+.main .casosResueltos .fotos-casosResueltos .casos{
+	width: 35%;
+	margin-bottom: 1%;
+	margin-left: 1%;
+	cursor: pointer;
+	position:relative;
+	overflow: hidden;
+	
+
+}
+
+.main .casosResueltos .fotos-casosResueltos .casos img{
+width: 100%;
+vertical-align: top;
+transition: all 0.5s ease;
+
+}
+
+.main .casosResueltos .fotos-casosResueltos .casos .texto-caso{
+
+	position:absolute;
+	bottom:0;
+	background: rgba(0,0,0,0.7);
+	color:@blanco;
+	padding-left: 0.5rem;
+	padding-bottom: 0.5rem;
+	transform: translateY(100%);
+	transition: all 0.5s ease-out;
+}
+.main .casosResueltos .fotos-casosResueltos .casos .texto-caso h5{
+font-family:@fuente-principal;
+font-size: 1.4rem;
+text-align: left;
+font-weight: 700;
+
+}
+.main .casosResueltos .fotos-casosResueltos .casos .texto-caso p{
+text-align: left;
+font-family: @fuente-secundaria;
+
+}
+.main .casosResueltos .fotos-casosResueltos .casos:hover .texto-caso{
+	transform: translateY(0%);
+
+}	
+
+.main .casosResueltos .fotos-casosResueltos .casos:hover img{
+	transform: scale(1.15);
+}
+
+// Modal  Casos-Resueltos
+.modal{
+	position:fixed;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 999999999;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.modal img{
+	width: 90%;
+	max-width: 600px;
+
+
+}
+
+.modal .btn-cerrar{
+	position:fixed;
+	width: 50px;
+	height: 50px;
+	top:20px;
+	right: 20px;
+ 	background:@botones;
+ 	text-align: center;
+ 	cursor: pointer;
+ 	border-radius:1rem;
+ 	
+}
+
+.modal .btn-cerrar i{
+	color: @blanco;
+	font-size: 1rem;
+	line-height: 50px;
+	transition: all .4s ease;
+}
+.modal .btn-cerrar i:hover{
+color: fade(@azul-oscuro, 65%);
+
+}	
+
+
+// Sección Nosotros
+
+.main .nosotros{
+	background: @azul-oscuro;
+	padding: 5.625rem 0;
+
+}
+
+.main .nosotros .contenedor{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+
+
+}
+
+.main .nosotros .contenedor .titulo-seccion{
+	width: 33.33%;
+	text-align: left;
+	padding-right: 5%;
+
+}
+
+
+
+.main .nosotros .titulo-seccion h2{
+	color: @blanco;
+	margin-top: 15px;
+	margin-bottom: 0;
+
+
+}
+
+.main .nosotros .titulo-seccion p{
+	color: @blanco;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.main .nosotros .texto-nosotros{
+	width: 50%;
+	text-align: left; 
+}
+
+.main .nosotros .texto-nosotros p{
+
+	font-size: 1.5625rem;
+	color: @blanco;
+	padding-left: 5%;	
+	line-height: 1.25;
+	border-left:2px solid @blanco;
+	padding-right:5%;
+	
+}
+
+// Aliados
+
+.main .aliados{
+	padding-top: 54px;
+	padding-bottom: 108px;
+
+}
+
+.main .aliados .nuestros-aliados{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	
+
+
+}
+	
+
+
+.main .aliados .nuestros-aliados .inte-aliados{
+
+	background:@blanco;
+	padding: 50px;
+	width: 100%;
+	max-width: 300px;
+	box-shadow: 0px 9px 32px -1px rgba(0,0,0,0.2);
+	margin-left: 5%;
+	text-align: center;
+	opacity: 0.4;
+	transition: all .3s ease;
+
+}
+
+.main .aliados .nuestros-aliados .inte-aliados:hover{
+opacity: 1;
+
+}	
+
+
+.main .aliados .nuestros-aliados .inte-aliados .foto{
+width: 50%;
+max-width: 100px;
+display: inline-block;
+margin-bottom: 10px;
+
+}
+
+
+.main .aliados .nuestros-aliados .inte-aliados .foto img{
+width: 100%;
+border-radius: 100%;
+transition: all .3s ease;
+
+
+}	
+
+.main .aliados .nuestros-aliados .inte-aliados  .texto-aliado h4{
+
+font-family: @fuente-secundaria;
+color: @negro;
+
+
+}
+
+.main .aliados .nuestros-aliados .inte-aliados  .texto-aliado p{
+font-family: @fuente-secundaria;
+color: @gris-titulo;
+font-weight: 300;
+
+
+}
+
+// Sección Slider
+
+.main .contenedor-slider{
+	width: 100%;
+	overflow: hidden;
+	padding: 54px 0;
+	position: relative;
+
+}
+
+.main .contenedor-slider .slider{
+width: 300%;
+display: flex;
+
+}
+.main .contenedor-slider .slider .slide{
+width: 15%;
+max-width: 950px;
+margin-right: 0.7%;
+box-shadow: 0px 20px 40px  #777777;
+}	
+.main .contenedor-slider .slider .slide img{
+width: 100%;
+vertical-align: top;
+}
+
+.main .contenedor-slider .btn-anterior, .main .contenedor-slider .btn-siguiente{
+
+display: inline-block;
+cursor: pointer;
+position:absolute;
+top: 50%;
+transform: translateY(-50%);
+
+
+}
+
+.main .contenedor-slider .btn-anterior{
+
+	left: 2%;
+
+}
+
+.main .contenedor-slider .btn-siguiente{
+	right: 2%;
+}
+
+.main .contenedor-slider .btn-anterior i, .main .contenedor-slider .btn-siguiente i{
+	color: @blanco;
+	transition: all .2s ease;
+}
+
+.main .contenedor-slider .btn-anterior i:hover , .main .contenedor-slider .btn-siguiente i:hover{
+
+color: @botones;
+}
+
+// Sección contacto
+
+.main .contacto{
+
+	padding: 108px 0  54px 0;
+
+}
+
+.main .contacto .datos-parallax{
+	padding: 5.625rem 0 11.85rem 0;
+	background-image: url(../img/contactoD.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	position:relative;
+	background-attachment: fixed;
+}
+
+.main .contacto .datos-parallax .overlay{
+	position:absolute;
+	width: 100%;
+	height: 100%;
+	background: fade(@negro, 14%);
+	top: 0;
+	z-index: 1;
+
+}
+
+.main .contacto .datos-parallax .contenedor{
+	position: relative;
+	z-index: 2;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+
+
+}
+
+.main .contacto .datos-parallax .contenedor .blurb{
+	background: @gris-oscuro;
+	padding: 2.25rem;
+	text-align: center;
+	width: 25%;
+	border-radius: 3rem;
+	justify-content: center;
+	transition: all .4s ease;
+
+}	
+
+.main .contacto .datos-parallax .contenedor .blurb:hover{
+	transform:scale(1.1);
+}
+
+.main .contacto .datos-parallax .contenedor .blurb h3{
+font-family: @fuente-principal;
+font-size: 1.25rem;
+font-weight: 700;
+color: @negro;
+margin-bottom: 0.875rem;
+line-height: 2.685rem;
+border-bottom: 2px solid @azul-oscuro;
+
+
+}
+
+.main .contacto .datos-parallax .contenedor .blurb p{
+font-family: @fuente-principal;
+font-weight: 400;
+font-size: 0.9rem;
+color: @negro;
+
+}
+
+// Formulario
+
+.main .contacto .formulario{
+	position:relative;
+	z-index: 3;
+	background: @blanco;
+	max-width: 40.625rem;
+	margin: 0 auto;
+	padding: 2.25rem;
+	margin-top: -6.25rem;
+	width: 90%;
+}
+
+.main  .contacto .formulario .formulario-contacto  .input-group{
+	position: relative;
+	margin-bottom: 1rem;
+
+} 
+.main  .contacto .formulario .formulario-contacto  .input-group input[type="text"], .main  .contacto .formulario .formulario-contacto  .input-group input[type="email"], .main  .contacto .formulario .formulario-contacto  textarea{
+font-family: @fuente-secundaria;
+color: @negro;
+font-size: 1rem;
+width: 100%;
+outline: none;
+padding: 0.9375rem 0;
+background: none;
+border:none;
+border-bottom:2px solid fade(@gris-oscuro, 50%);
+vertical-align: top;
+
+&:focus{
+	border-bottom:2px solid @gris-oscuro;
+
+}
+
+}
+
+.main  .contacto .formulario .formulario-contacto  textarea{
+	max-width: 100%;
+	max-height: 10.25rem;
+	min-height: 5.125rem;
+	min-width: 100%;
+
+}
+
+.main  .contacto .formulario .formulario-contacto  .input-group label{
+	color: @titulos;
+	font-family: @fuente-secundaria;
+
+	&.label {
+	position:absolute;
+	top: 1rem;
+	left: 0;
+	font-size: 1rem;
+	line-height: 1rem;
+	transition: all .3s ease;
+
+	&.active{
+		top: -12px;
+		margin-left: 0;
+		font-size: 0.75rem;
+		line-height: 0.75rem;
+		color: @titulos;
+	}
+}
+
+}
+.main  .contacto .formulario .formulario-contacto  .input-group .error{
+	position: absolute;
+	color: red;
+	font-family: @fuente-secundaria;
+	font-size: 0.875rem;
+}
+
+.main  .contacto .formulario .formulario-contacto input[type="submit"]{
+
+	font-family: @fuente-secundaria;
+	background: @titulos;
+	color: @blanco;
+	border:2px solid @titulos;
+	border-radius:1px;
+	cursor: pointer;
+	display: block;
+	margin: 0 auto;
+	margin-top: 3.125rem;
+	padding: 0.9375rem;
+	width: 20%;
+	outline: none;
+	transition: all .3s ease;
+
+	&:hover{
+		background: darken(@titulos, 8%);
+	}
+} 
+
+// Final Main
+
+// Footer
+
+footer{
+
+background: @titulos;
+padding: 2rem 2.25rem;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+flex-wrap: wrap;
+align-items: center;
+position: relative;
+
+
+}
+
+footer .logo-footer{
+	display: inline-block;
+	width: 50px;
+	vertical-align: top;
+}
+
+
+footer .logo-footer a img{
+	width: 100%;
+	margin-left: 3rem;
+}
+
+footer .copy{
+	
+	color: @blanco;
+	letter-spacing: 0;
+
+
+}
+
+
+footer .footer-redes a{
+
+text-decoration: none;
+color: @blanco;
+padding-right:0.5rem;
+transition:all .3s ease;
+
+&:hover{
+	color: fade(@botones, 60%);
+}
+
+}	
+
+footer .footer-redes a:last-child{
+padding-right: 0;
+
+}	
+
+// Final footer
+
+// Inicio sección mediaqueries
+
+@media screen and (max-width:1139px){
+
+	.main .nosotros .contenedor .titulo-seccion, .main .nosotros .contenedor .texto-nosotros{
+
+		width: 100%;
+
+	}
+
+	.main .nosotros .contenedor .titulo-seccion h2, p{
+		text-align: center;
+
+	}
+	.main .nosotros .texto-nosotros p{
+	border-left:0;
+	border-top:2px solid @gris-oscuro;
+	text-align: center;
+	padding-top: 2rem;
+
+	}
+}
+
+@media screen and (max-width:757px){
+
+.main .aliados .contenedor .nuestros-aliados .inte-aliados{	
+margin-bottom: 2rem;
+}
+
+}	
+@media screen and (max-width: 980px){
+
+.main .contacto .datos-parallax .contenedor .blurb{
+width: 100%;
+max-width: 20rem;
+margin: 0 auto;
+margin-bottom: 2.25rem;
+
+&:last-child{
+	margin-bottom: 0;
+}
+
+}
+}
+@media screen and (max-width: 678px){
+.main .contacto .formulario .formulario-contacto input[type="submit"]{
+
+	width: 100%;
+
+
+
+} 
+
+footer .logo-footer{
+display: none;
+	
+}
+
+footer .copy, .footer-redes{
+	width: 100%;
+	text-align: center;
+
+}
+footer .copy{
+	margin-bottom: 1rem;
+}
+
+}
+// Encabezado
+@media screen and (max-width: 900px){
+	.menu-bar-pc, .encabezado-fijo{
+		display: none;
+	}
+
+	.menu-mobile{
+		display: block;
+		width: 100%;
+		padding: 5px 18px;
+		background: @blanco;
+		color: @azul-oscuro;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 100;
+	}
+
+	.menu-mobile .barra{
+		display: flex;
+		justify-content: space-between;
+		align-items:center;
+
+	}
+	.menu-mobile .barra .logo{
+		width: 40px;
+
+	}
+	.menu-mobile .barra a i{
+		font-size: 1.4rem;
+		color: @negro;
+	}
+
+	.menu-mobile .menu-principal{
+		width: 80%;
+		display: block;
+		position: fixed;
+		top:47px;
+		left: -100%;
+		border-bottom: 1px solid @azul-oscuro;
+		border-right: 1px solid @azul-oscuro;
+		box-shadow: 0px 1px 5px -1px rgba(0,0,0,0.2);
+		background: @blanco;
+		padding: 0;
+
+	}
+	  .menu-mobile .menu-principal a{
+	  	display: block;
+	  	padding: 10px;
+	  	text-decoration: none;
+	  	color: @negro;
+	  	border-bottom: 1px solid rgba(204,204,204,0.5);
+	  	text-align:center;
+	  }
+
+	  // Banner
+	  
+
+	  .menu-mobile .menu-principal a:hover{
+	  	background: fade(@azul-oscuro, 30%);
+	  }
+
+}
+
+@media screen and (max-width: 1140px){
+.main .banner-principal .banner .texto-banner {
+
+}	
+.main .banner-principal .banner .texto-banner h2 {
+
+font-size: 5rem;
+
+}
+.main .banner-principal .banner .texto-banner p {
+font-size: 1rem;
+text-align: left;
+width: 90%;
+
+}	
+.main .banner-principal .banner .texto-banner a {
+font-size: 1rem;
+}	
+
+
+
+.main .banner-principal .banner .imagen-banner img{
+	display: none;
+}
+
+.main .banner-principal .ondas{
+position: absolute;
+bottom: -5px;
+	
+}
+
+
+}
+@media screen and (max-width: 880px){
+.main .banner-principal .banner .texto-banner h2 {
+
+font-size: 3rem;
+
+}
+.main .banner-principal .banner .texto-banner p {
+font-size: 0.8rem;
+text-align: left;
+width: 90%;
+
+}
+
+.main .banner-principal .banner .texto-banner a {
+font-size: 0.7rem;
+}		
+
+}	
+
+@media screen and (max-width: 350px){
+.main .banner-principal .banner .texto-banner h2 {
+
+font-size: 2rem;
+
+}
+
+.main .banner-principal .banner .texto-banner p {
+font-size: 0.8rem;
+text-align: left;
+width: 90%;
+margin-top: 1rem;
+}
+
+main .banner-principal .banner .texto-banner a {
+font-size: 0.8rem;
+}
+
+
+
+}
+
+@media screen and (max-width: 523px){
+	.main .casosResueltos .contenedor .titulo-seccion h2{
+		font-size: 2rem;
+	}
+	.main .casosResueltos .contenedor .titulo-seccion p{
+		font-size: 1rem;
+}
+}
+
+@media screen and (max-width: 523px){
+
+.main .casosResueltos .contenedor .titulo-seccion h2{
+		font-size: 2rem;
+	}
+
+	.main .casosResueltos .contenedor .titulo-seccion p{
+		font-size: 1rem;
+}
+.main .nosotros .contenedor .titulo-seccion h2{
+		font-size: 2rem;
+	}
+
+	.main .nosotros .contenedor .titulo-seccion p{
+		font-size: 1rem;
+}
+
+.main .nosotros .contenedor .texto-nosotros p{
+
+	font-size: 0.8rem;
+	text-align: center;
+}
+.main .aliados .contenedor .titulo-seccion h2{
+font-size: 2rem;
+
+}
+.main .aliados .contenedor .titulo-seccion p{
+font-size: 0.8rem;
+}
+.main .contacto .titulo-seccion h2{
+font-size: 2rem;
+
+}
+.main .contacto  .titulo-seccion p{
+font-size: 0.8rem;
+
+}
+
+footer .copy p, .footer-redes i{
+	font-size: 0.8rem;
+}
+
+
+}
+
+@media screen and (max-width: 3000px){
+.ondas{
+
+	max-height: 40%;
+	bottom: -2rem;
+
+}
+
+
+}	
+
+@media screen and (max-width: 1370px){
+.ondas{
+
+	max-height: 32%;
+
+
+}
+
+}
+@media screen and (max-width:  4000px){
+
+	.main .banner-principal .banner .imagen-banner img{
+
+		transform:translateY(5.7rem);
+		width: 36rem;
+
+	}
+
+
+
+}
+
+
+@media screen and (max-width:  1370px){
+
+	.main .banner-principal .banner .imagen-banner img{
+
+		transform:translateY(5.7rem);
+		width: 28rem;
+
+	}
+
+
+
+}
+
+
+
+
+
+
+
