@@ -598,6 +598,9 @@ footer .footer-redes a:hover {
 footer .footer-redes a:last-child {
   padding-right: 0;
 }
+/* Enviado.html */
+
+/* Media Queries */
 @media screen and (max-width: 1139px) {
   .main .nosotros .contenedor .titulo-seccion,
   .main .nosotros .contenedor .texto-nosotros {
